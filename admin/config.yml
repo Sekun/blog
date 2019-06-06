@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  branch: master
+  name: github
+  repo: Sek/blog
 media_folder: "content/images"
 collections:
   - name: "Blog"
