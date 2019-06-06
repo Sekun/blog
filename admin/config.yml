@@ -1,0 +1,20 @@
+backend:
+  name: gitlab
+  repo: vincent-spies/blog
+media_folder: "content/images"
+collections:
+  - name: "Blog"
+    label: "Blog"
+    folder: "content/articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: "title", label: "title", widget: "string", required: true }
+      - { name: "date", label: "Publish Date", widget: "datetime" }
+      - { name: "authors", authors: "string", default: "M-J Wall" }
+      - name: "content"
+        label: "content"
+        widget: "list"
+        fields:
+          - { name: "body", label: "Body", widget: "markdown", required: false }
+          - { name: "img", label: "img", widget: "image", required: false }
